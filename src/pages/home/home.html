@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Export Data
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>Tower</ion-col>
+      <ion-col>Flat</ion-col>
+      <ion-col>Month</ion-col>
+      <ion-col>Year</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let item of data">
+      <ion-col>{{item.Tower}}</ion-col>
+      <ion-col>{{item.Flat}}</ion-col>
+      <ion-col>{{item.Month}}</ion-col>
+      <ion-col>{{item.Year}}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list class="format-list" radio-group no-lines [(ngModel)]="selectedFormat">
+
+
+    <ion-list-header no-lines>
+      Download as:
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Comma delimited</ion-label>
+      <ion-radio item-start value={{downloadFormat.COMMA}}></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Pipe delimited</ion-label>
+      <ion-radio item-start value={{downloadFormat.PIPE}}></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Tab delimited</ion-label>
+      <ion-radio item-start value={{downloadFormat.TAB}}></ion-radio>
+    </ion-item>
+
+  </ion-list>
+
+
+  <button ion-button secondary (click)="OnExport()">Export To CSV</button>
+</ion-content>

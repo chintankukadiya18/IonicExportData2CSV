@@ -1,0 +1,7 @@
+{
+  "name": "export-data",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Select Folder</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="closeModal()">
+                <ion-icon item-right name="ios-close-outline"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let folder of folderList">
+            <h2 (click)="onSelect(folder)" >
+              <ion-icon item-left name="ios-folder-outline"></ion-icon>
+              {{ folder.name }}
+            </h2>
+        </ion-item>
+    </ion-list>
+</ion-content>
