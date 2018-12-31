@@ -2,7 +2,7 @@
 
 Now a day in mobile world there are plenty of applications which we are using in our day to day life. 
 Almost all applications are use to managing our data. 
-This app is demostrating how to export data into csv using different disclaimer.
+This app is demostrating how to export data into csv using different delimiter.
 
 ## Installation
 
